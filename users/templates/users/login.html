@@ -1,3 +1,4 @@
+{% load static %}
 {% load crispy_forms_tags %}
 
 <!doctype html>
@@ -73,7 +74,8 @@
 
 <div class="row main-preview">
     <div class="first-preview col-xl-6 col-md-6 col-sm-12 d-none d-sm-block">
-        <img src="/static/images/image1.jpeg" alt="">
+        
+        <img src="{% static '/images/image1.jpeg' %}" alt="Hi!">
     </div>
 
     <div class="content-section second-preview col-xl-6 col-md-6 col-sm-12">
