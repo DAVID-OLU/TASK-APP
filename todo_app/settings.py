@@ -14,6 +14,8 @@ import os
 import django_heroku
 from pathlib import Path
 
+DATABASE_URL = os.environ.get('mysql://ab2cubpz3tmn4ka3:e8kc2k39mzxtmmal@q0h7yf5pynynaq54.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/puncz0odc9a1avhd')
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
