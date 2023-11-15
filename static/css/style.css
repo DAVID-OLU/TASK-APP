@@ -1,0 +1,111 @@
+
+.striker {
+    text-decoration: line-through;
+}
+
+.item-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.item-link:hover {
+    color: #fff;
+    background-color: #212529;
+}
+
+.item-delete:hover {
+    background-color: #bb2d3b;
+}
+
+.edit-link {
+    text-decoration: unset;
+} 
+
+
+h6 {
+    text-align: right;
+    color: lightgreen; 
+}
+
+
+
+
+/* Login page styling */
+
+/* .body { 
+  padding: 0; 
+  margin: 0; 
+} 
+.main-preview {
+  display: flex;
+  flex-direction: row;
+}
+.first-preview{
+  background-image: url("/static/images/4thImage.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  width: 50%;
+  height: 100vh; 
+  background-color: green; 
+  text-align: right;
+}
+.second-preview{
+  width: 50%;
+  color: rgba(255, 255, 255, 0.872); 
+  background-color: #232D3F;
+  height: 100vh;
+}
+.container{
+  width: 50%;
+  margin-top: 15rem;
+}
+.welcome-text{
+  color: #0dcaf0;
+}
+.welcome-text-link{
+  color: #0dcaf0;
+  text-decoration: none;
+}
+.welcome-text-link:hover{
+  color: #0dcaf07e;
+}
+.text-link{
+  color: #0dcaf0;
+}
+.text-link:hover{
+  color: #0dcaf07e;
+} */
+
+
+
+
+/* 
+footer {
+  width: fit-content;
+} */
+
+/* .contact-section { */
+  /* padding: 6% 40% 30%; */
+/* } */
+
+.gradient-background {
+    background: linear-gradient(300deg, #00bfff, rgb(148, 134, 134), #6a88aa);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+
+  }
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    } 
+  }
+
+
