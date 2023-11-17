@@ -14,6 +14,9 @@ import os
 import django_heroku
 from pathlib import Path
 
+
+os.environ['mysql'] = 'mysql://ab2cubpz3tmn4ka3:e8kc2k39mzxtmmal@q0h7yf5pynynaq54.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/puncz0odc9a1avhd'
+
 DATABASE_URL = os.environ.get('mysql://ab2cubpz3tmn4ka3:e8kc2k39mzxtmmal@q0h7yf5pynynaq54.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/puncz0odc9a1avhd')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -152,8 +155,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
 
-import dj_database_url
+# import dj_database_url
 
-DATABASES['default'] = dj_database_url.config()
+# DATABASES['default'] = dj_database_url.config()
 
 django_heroku.settings(locals())
