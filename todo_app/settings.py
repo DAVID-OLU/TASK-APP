@@ -92,6 +92,9 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         #  'USER': 'root@localhost',
         #  'PASSWORD': 'john@1HACKER', 
+        'OPTIONS': {
+            'sslmode': 'prefer'
+        }
 
     }
 }
