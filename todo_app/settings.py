@@ -159,3 +159,4 @@ LOGIN_URL = 'login'
 # DATABASES['default'] = dj_database_url.config()
 
 django_heroku.settings(locals())
+del DATABASES['default']['OPTIONS']['sslmode']
