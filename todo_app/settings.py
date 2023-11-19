@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'todo_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 # import dj_database_url
