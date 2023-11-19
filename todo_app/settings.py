@@ -19,7 +19,7 @@ from pathlib import Path
 # DATABASE_URL = os.environ.get('mysql://ab2cubpz3tmn4ka3:e8kc2k39mzxtmmal@q0h7yf5pynynaq54.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/puncz0odc9a1avhd')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
 ALLOWED_HOSTS = ['david-todo-app-cb7d15d76a9d.herokuapp.com']
 
@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'todo_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-         'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         #  'USER': 'root@localhost',
         #  'PASSWORD': 'john@1HACKER', 
 
@@ -141,9 +141,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-            os.path.join(BASE_DIR, 'static'),
-]
+# STATICFILES_DIRS = [
+#             os.path.join(BASE_DIR, 'static'),
+# ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
