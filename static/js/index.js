@@ -1,7 +1,7 @@
 // $("div").addClass("main-preview");
 // $("div").addClass("first-preview");
 // $("div").addClass("second-preview");
-alert("hello");
+
 
 function display_c(){
 
