@@ -33,8 +33,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = ['david-todo-app-cb7d15d76a9d.herokuapp.com']
+ALLOWED_HOSTS = ["MY_ALLOWED_HOST"]
 
 
 # Application definition
@@ -92,21 +91,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        #  'USER': 'root@localhost',
-        #  'PASSWORD': 'john@1HACKER', 
-        # 'OPTIONS': {
-        #     'sslmode': 'prefer'
-        # }
-
     }
 }
-# import dj_database_url
-
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default=os.environ['mysql://ab2cubpz3tmn4ka3:e8kc2k39mzxtmmal@q0h7yf5pynynaq54.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/puncz0odc9a1avhd']
-#     )
-# }
+database_url = os.environ.get("DATABASE_URL")
+DATABASES['default'] = dj_database_url.parse(database_url)
 
 
 # Password validation
@@ -168,5 +156,5 @@ LOGIN_URL = 'login'
 
 # DATABASES['default'] = dj_database_url.config()
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 # del DATABASES['default']['OPTIONS']['sslmode']
