@@ -101,11 +101,11 @@ DATABASES = {
     'default': dj_database_url.config(),
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'dpg-clvda4mg1b2c73cfe4jg-a',
         'USER': 'task_app_20xr_user',
         'PASSWORD': '9FbG0beOTCD7P5larMEoHM2y0S5Th2tJ',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'HOST': "localhost",
+        'PORT': "127.0.0.1",
     }
     
 }
