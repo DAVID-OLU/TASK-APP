@@ -29,6 +29,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -82,7 +83,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'todo_app.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
@@ -92,16 +92,12 @@ WSGI_APPLICATION = 'todo_app.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
-# database_url = os.environ.get("DATABASE_URL")
-# DATABASES = {
-#     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-# }
+
 DATABASE_URL = os.getenv('DATABASE_URL')
 DATABASES = {
     'default': dj_database_url.config(),
 }
-# database_url = os.environ.get("DATABASE_URL")
-# DATABASES['default'] = dj_database_url.parse(database_url)
+
 
 
 # Password validation
@@ -158,10 +154,3 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGIN_URL = 'login'
-
-# import dj_database_url
-
-# DATABASES['default'] = dj_database_url.config()
-
-# django_heroku.settings(locals())
-# del DATABASES['default']['OPTIONS']['sslmode']
