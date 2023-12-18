@@ -105,7 +105,7 @@ DATABASES = {
         'USER': 'task_app_20xr_user',
         'PASSWORD': '9FbG0beOTCD7P5larMEoHM2y0S5Th2tJ',
         'HOST': "localhost",
-        'PORT': "127.0.0.1",
+        'PORT': 5432,
     }
     
 }
