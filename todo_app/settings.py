@@ -12,10 +12,12 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from dotenv import load_dotenv
 load_dotenv()
 import os
-import django_heroku
 from pathlib import Path
 from decouple import config
 import dj_database_url
+
+import environ
+env = environ.Env()
 
 
 # DATABASE_URL = os.environ.get('mysql://ab2cubpz3tmn4ka3:e8kc2k39mzxtmmal@q0h7yf5pynynaq54.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/puncz0odc9a1avhd')
@@ -29,7 +31,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = config('SECRET_KEY')
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
