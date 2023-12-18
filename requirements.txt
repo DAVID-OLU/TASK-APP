@@ -4,6 +4,7 @@ distlib==0.3.7
 dj-database-url==2.1.0
 Django==4.2.7
 django-crispy-forms==2.0
+django-environ==0.11.2
 django-heroku==0.3.1
 filelock==3.12.4
 gunicorn==21.2.0
@@ -14,6 +15,7 @@ psycopg2-binary==2.9.9
 pystache==0.6.5
 python-decouple==3.8
 python-dotenv==1.0.0
+python-environ==0.4.54
 sqlparse==0.4.4
 static==1.1.1
 typing_extensions==4.8.0
